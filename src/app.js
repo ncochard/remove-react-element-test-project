@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/server';
 
 class Desktop extends Component {
     render() {
-        return <div>
+        return <div className="desktop">
             { this.props.children }
         </div>;
     }
@@ -11,7 +11,7 @@ class Desktop extends Component {
 
 class Mobile extends Component {
     render() {
-        return <div>
+        return <div className="mobile">
             { this.props.children }
         </div>;
     }

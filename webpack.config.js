@@ -41,7 +41,7 @@ function buildWebpackConfig({ bundleName, removedElement }) {
                 uglifyOptions: {
                     beautify: true,
                     ecma: 6,
-                    compress: false,
+                    compress: true,//important: the dead code removal will remove the unused components.
                     comments: false
                 }
             })
