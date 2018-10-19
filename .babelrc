@@ -6,7 +6,8 @@
                     "babel-preset-env",
                     {
                         "targets": {
-                            "node": "6.10"
+                            "node": "6.10",
+                            "forceAllTransforms": true
                         }
                     }
                 ],
@@ -22,7 +23,8 @@
                     "babel-preset-env",
                     {
                         "targets": {
-                            "node": "6.10"
+                            "node": "6.10",
+                            "forceAllTransforms": true
                         },
                         "modules": false
                     }

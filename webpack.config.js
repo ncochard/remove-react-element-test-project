@@ -5,6 +5,7 @@ const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 function buildWebpackConfig({ bundleName, removedElement }) {
     return {
+        mode: 'development',
         target: 'node',
         entry: {
             app: path.join(__dirname, 'src', 'app.js')
@@ -27,9 +28,9 @@ function buildWebpackConfig({ bundleName, removedElement }) {
                             loader: 'babel-loader',
                             options: {
                                 forceEnv: 'module',
-                                plugins: [
-                                    [ "remove-react-element", { "elementNames": [removedElement] } ]
-                                ]
+                                // plugins: [
+                                //     [ "remove-react-element", { "elementNames": [removedElement] } ]
+                                // ]
                             }
                         }
                     ]
