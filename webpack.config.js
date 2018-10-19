@@ -28,9 +28,9 @@ function buildWebpackConfig({ bundleName, removedElement }) {
                             loader: 'babel-loader',
                             options: {
                                 forceEnv: 'module',
-                                // plugins: [
-                                //     [ "remove-react-element", { "elementNames": [removedElement] } ]
-                                // ]
+                                plugins: [
+                                    [ "remove-react-element", { "elementNames": [removedElement] } ]
+                                ]
                             }
                         }
                     ]
