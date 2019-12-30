@@ -1,10 +1,10 @@
 /*global __dirname*/
 const webpack = require('webpack');
 const path = require('path');
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 function buildWebpackConfig({ bundleName, removedElement }) {
     return {
+        mode: 'production',
         target: 'node',
         entry: {
             app: path.join(__dirname, 'src', 'app.js')
@@ -26,7 +26,7 @@ function buildWebpackConfig({ bundleName, removedElement }) {
                         {
                             loader: 'babel-loader',
                             options: {
-                                forceEnv: 'module',
+                                envName: 'module',
                                 plugins: [
                                     [ "remove-react-element", { "elementNames": [removedElement] } ]
                                 ]
@@ -35,17 +35,7 @@ function buildWebpackConfig({ bundleName, removedElement }) {
                     ]
                 }
             ]
-        },
-        plugins: [
-            new UglifyJSPlugin({
-                uglifyOptions: {
-                    beautify: true,
-                    ecma: 6,
-                    compress: true,//important: the dead code removal will remove the unused components.
-                    comments: false
-                }
-            })
-        ]
+        }
     };
 }
 

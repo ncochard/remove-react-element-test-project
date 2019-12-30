@@ -3,14 +3,14 @@
         "development": {
             "presets": [
                 [
-                    "babel-preset-env",
+                    "@babel/preset-env",
                     {
                         "targets": {
                             "node": "6.10"
                         }
                     }
                 ],
-                "react"
+                "@babel/preset-react"
             ],
             "plugins": [
                 [ "remove-react-element", { "elementNames": ["Desktop"] } ]
@@ -19,7 +19,7 @@
         "module": {
             "presets": [
                 [
-                    "babel-preset-env",
+                    "@babel/preset-env",
                     {
                         "targets": {
                             "node": "6.10"
@@ -27,7 +27,7 @@
                         "modules": false
                     }
                 ],
-                "react"
+                "@babel/preset-react"
             ]
         }
     },
